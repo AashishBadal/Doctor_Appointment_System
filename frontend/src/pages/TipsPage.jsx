@@ -1,5 +1,5 @@
 import { Edit, Sparkles } from "lucide-react";
-import React, { useState } from "react";
+import { useState } from "react";
 import axios from "axios";
 import toast from "react-hot-toast";
 import Markdown from "react-markdown";
@@ -16,9 +16,9 @@ const TipsPage = () => {
   e.preventDefault();
   try {
     setLoading(true);
-    const prompt = `answer like a doctor. answer in 5 points health tip. i have following problems. ${input}`;
+    const prompt = `answer like a doctor. answer in 5 points health tip.Suggest which specialist should i visit. i have following problems. ${input}`;
 
-    const { data } = await axios.post("/api/ai/generate-article", {
+    const { data } = await axios.post("/api/ai/generate-tips", {
       prompt,
     });
     
@@ -80,7 +80,7 @@ const TipsPage = () => {
             <div className="text-sm flex flex-col items-center gap-5 text-gray-400">
               I
               <Edit className="w-9 h-9" />
-              <p>Enter your problem and click "Generate Tip " to get a health tip</p>
+              <p>Enter your problem and click Generate Tip to get a health tip</p>
             </div>
           </div>
         ) : (
