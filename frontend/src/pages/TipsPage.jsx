@@ -52,7 +52,7 @@ const TipsPage = () => {
           value={input}
           type="text"
           className="w-full p-2 px-3 mt-2 outline-none text-sm rounded-md border border-gray-300"
-          placeholder="The future of artificial intelligence is..."
+          placeholder="I have a headache"
           required
         />
         <br />
